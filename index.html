@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HealthCare Plus - Premium Medical Care</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-content">
+                <div class="logo">
+                    <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                        <circle cx="20" cy="20" r="18" fill="#2C5F7F" opacity="0.1"/>
+                        <path d="M20 8V32M12 20H28" stroke="#2C5F7F" stroke-width="3" stroke-linecap="round"/>
+                    </svg>
+                    <span>HealthCare Plus</span>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#doctors">Doctors</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <button class="btn-primary appointment-btn" onclick="openAppointmentModal()">Book Appointment</button>
+                <button class="mobile-menu-btn" onclick="toggleMobileMenu()">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-background"></div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="fade-in">Your Health, <br>Our Priority</h1>
+                    <p class="fade-in-delay">Experience compassionate, world-class medical care with our team of expert healthcare professionals.</p>
+                    <div class="hero-buttons fade-in-delay-2">
+                        <button class="btn-primary" onclick="openAppointmentModal()">Schedule Consultation</button>
+                        <button class="btn-secondary" onclick="scrollToSection('services')">Our Services</button>
+                    </div>
+                </div>
+                <div class="hero-image fade-in-delay">
+                    <div class="floating-card card-1">
+                        <div class="card-icon">👨‍⚕️</div>
+                        <div class="card-text">
+                            <h4>50+</h4>
+                            <p>Expert Doctors</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-2">
+                        <div class="card-icon">⭐</div>
+                        <div class="card-text">
+                            <h4>10k+</h4>
+                            <p>Happy Patients</p>
+                        </div>
+                    </div>
+                    <div class="floating-card card-3">
+                        <div class="card-icon">🏥</div>
+                        <div class="card-text">
+                            <h4>24/7</h4>
+                            <p>Emergency Care</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🩺</div>
+                    <h3>Modern Equipment</h3>
+                    <p>State-of-the-art medical technology for accurate diagnosis and treatment</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏰</div>
+                    <h3>24/7 Availability</h3>
+                    <p>Round-the-clock emergency services and patient support</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💊</div>
+                    <h3>Expert Care</h3>
+                    <p>Experienced medical professionals across all specializations</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Online Booking</h3>
+                    <p>Easy appointment scheduling through our digital platform</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <div class="section-header">
+                <h2>Our Medical Services</h2>
+                <p>Comprehensive healthcare solutions tailored to your needs</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">01</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>General Medicine</h3>
+                        <p>Comprehensive primary care for common health concerns and preventive medicine</p>
+                        <ul class="service-features">
+                            <li>Health Check-ups</li>
+                            <li>Chronic Disease Management</li>
+                            <li>Preventive Care</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">02</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Cardiology</h3>
+                        <p>Expert heart care with advanced diagnostic and treatment options</p>
+                        <ul class="service-features">
+                            <li>ECG & Echo Tests</li>
+                            <li>Heart Disease Treatment</li>
+                            <li>Cardiac Rehabilitation</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">03</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Pediatrics</h3>
+                        <p>Specialized care for infants, children, and adolescents</p>
+                        <ul class="service-features">
+                            <li>Vaccinations</li>
+                            <li>Growth Monitoring</li>
+                            <li>Child Development</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">04</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Orthopedics</h3>
+                        <p>Treatment for bone, joint, and muscle conditions</p>
+                        <ul class="service-features">
+                            <li>Sports Injuries</li>
+                            <li>Joint Replacement</li>
+                            <li>Physiotherapy</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">05</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Dermatology</h3>
+                        <p>Skin, hair, and nail care with cosmetic treatments</p>
+                        <ul class="service-features">
+                            <li>Skin Treatments</li>
+                            <li>Cosmetic Procedures</li>
+                            <li>Hair Care</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="service-card">
+                    <div class="service-image">
+                        <div class="service-overlay"></div>
+                        <span class="service-number">06</span>
+                    </div>
+                    <div class="service-content">
+                        <h3>Laboratory Services</h3>
+                        <p>Comprehensive diagnostic testing and pathology services</p>
+                        <ul class="service-features">
+                            <li>Blood Tests</li>
+                            <li>X-Ray & Imaging</li>
+                            <li>Quick Results</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section id="doctors" class="doctors">
+        <div class="container">
+            <div class="section-header">
+                <h2>Meet Our Specialists</h2>
+                <p>Board-certified physicians dedicated to your wellbeing</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <span>👨‍⚕️</span>
+                        </div>
+                        <div class="doctor-badge">MBBS, MD</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Rajesh Kumar</h3>
+                        <p class="specialty">Cardiologist</p>
+                        <p class="experience">15 years experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <strong>2000+</strong>
+                                <span>Patients</span>
+                            </div>
+                            <div class="stat">
+                                <strong>4.9</strong>
+                                <span>Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline" onclick="openAppointmentModal('Dr. Rajesh Kumar')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <span>👩‍⚕️</span>
+                        </div>
+                        <div class="doctor-badge">MBBS, MS</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Priya Sharma</h3>
+                        <p class="specialty">Pediatrician</p>
+                        <p class="experience">12 years experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <strong>1500+</strong>
+                                <span>Patients</span>
+                            </div>
+                            <div class="stat">
+                                <strong>4.8</strong>
+                                <span>Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline" onclick="openAppointmentModal('Dr. Priya Sharma')">Book Appointment</button>
+                    </div>
+                </div>
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <div class="doctor-placeholder">
+                            <span>👨‍⚕️</span>
+                        </div>
+                        <div class="doctor-badge">MBBS, DNB</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3>Dr. Amit Patel</h3>
+                        <p class="specialty">Orthopedic Surgeon</p>
+                        <p class="experience">18 years experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <strong>2500+</strong>
+                                <span>Patients</span>
+                            </div>
+                            <div class="stat">
+                                <strong>5.0</strong>
+                                <span>Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-outline" onclick="openAppointmentModal('Dr. Amit Patel')">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose HealthCare Plus?</h2>
+                    <p class="lead">We combine medical excellence with compassionate care to provide you with the best healthcare experience.</p>
+                    <div class="about-features">
+                        <div class="about-feature">
+                            <div class="feature-number">01</div>
+                            <div>
+                                <h4>Patient-Centered Care</h4>
+                                <p>Every treatment plan is tailored to your unique health needs and lifestyle</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-number">02</div>
+                            <div>
+                                <h4>Advanced Technology</h4>
+                                <p>Latest medical equipment and digital health records for precise diagnosis</p>
+                            </div>
+                        </div>
+                        <div class="about-feature">
+                            <div class="feature-number">03</div>
+                            <div>
+                                <h4>Experienced Team</h4>
+                                <p>Board-certified doctors with decades of combined medical expertise</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <h3>15+</h3>
+                        <p>Years of Service</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>50+</h3>
+                        <p>Medical Experts</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>10k+</h3>
+                        <p>Happy Patients</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>98%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2>Get In Touch</h2>
+                <p>We're here to help. Reach out to us anytime.</p>
+            </div>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-icon">📍</div>
+                        <h4>Visit Us</h4>
+                        <p>123 Medical Center Drive<br>Chennai, Tamil Nadu 600001</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">📞</div>
+                        <h4>Call Us</h4>
+                        <p>Emergency: +91 98765 43210<br>Appointments: +91 98765 43211</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">✉️</div>
+                        <h4>Email Us</h4>
+                        <p>info@healthcareplus.com<br>appointments@healthcareplus.com</p>
+                    </div>
+                    <div class="contact-card">
+                        <div class="contact-icon">🕐</div>
+                        <h4>Working Hours</h4>
+                        <p>Mon - Sat: 8:00 AM - 8:00 PM<br>Sunday: 9:00 AM - 2:00 PM</p>
+                    </div>
+                </div>
+                <form class="contact-form" onsubmit="handleContactSubmit(event)">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email Address</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" name="subject" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <svg width="40" height="40" viewBox="0 0 40 40" fill="none">
+                            <circle cx="20" cy="20" r="18" fill="#fff" opacity="0.1"/>
+                            <path d="M20 8V32M12 20H28" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+                        </svg>
+                        <span>HealthCare Plus</span>
+                    </div>
+                    <p>Providing exceptional medical care with compassion and expertise since 2009.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                        <li><a href="#about">About Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">General Medicine</a></li>
+                        <li><a href="#services">Cardiology</a></li>
+                        <li><a href="#services">Pediatrics</a></li>
+                        <li><a href="#services">Orthopedics</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <ul>
+                        <li>📍 Chennai, Tamil Nadu</li>
+                        <li>📞 +91 98765 43210</li>
+                        <li>✉️ info@healthcareplus.com</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 HealthCare Plus. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Modal -->
+    <div id="appointmentModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book an Appointment</h2>
+                <button class="close-btn" onclick="closeAppointmentModal()">&times;</button>
+            </div>
+            <form class="appointment-form" onsubmit="handleAppointmentSubmit(event)">
+                <div class="form-group">
+                    <label for="patient-name">Patient Name</label>
+                    <input type="text" id="patient-name" name="patient-name" required>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patient-phone">Phone Number</label>
+                        <input type="tel" id="patient-phone" name="patient-phone" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patient-email">Email</label>
+                        <input type="email" id="patient-email" name="patient-email" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointment-date">Preferred Date</label>
+                        <input type="date" id="appointment-date" name="appointment-date" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointment-time">Preferred Time</label>
+                        <select id="appointment-time" name="appointment-time" required>
+                            <option value="">Select Time</option>
+                            <option value="9:00 AM">9:00 AM</option>
+                            <option value="10:00 AM">10:00 AM</option>
+                            <option value="11:00 AM">11:00 AM</option>
+                            <option value="12:00 PM">12:00 PM</option>
+                            <option value="2:00 PM">2:00 PM</option>
+                            <option value="3:00 PM">3:00 PM</option>
+                            <option value="4:00 PM">4:00 PM</option>
+                            <option value="5:00 PM">5:00 PM</option>
+                            <option value="6:00 PM">6:00 PM</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="doctor-select">Select Doctor</label>
+                    <select id="doctor-select" name="doctor-select" required>
+                        <option value="">Choose a Doctor</option>
+                        <option value="Dr. Rajesh Kumar">Dr. Rajesh Kumar - Cardiologist</option>
+                        <option value="Dr. Priya Sharma">Dr. Priya Sharma - Pediatrician</option>
+                        <option value="Dr. Amit Patel">Dr. Amit Patel - Orthopedic Surgeon</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="reason">Reason for Visit</label>
+                    <textarea id="reason" name="reason" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
